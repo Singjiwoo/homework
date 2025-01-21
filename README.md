@@ -1,2 +1,3 @@
-# homework
-ithillel_homework
+# homework3
+ithillel
+Pasha Tyukhtiy
