@@ -1,2 +1,2 @@
-# homework
-ithillel_homework2
+# homework2
+ithillel
