@@ -1,3 +1,3 @@
-# homework3
+# Main
 ithillel
 Pasha Tyukhtiy
