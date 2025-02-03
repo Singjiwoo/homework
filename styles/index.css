@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('fonts/CeraPro-Regular.woff2') format('woff2'),
+        url('fonts/CeraPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('fonts/CeraPro-Bold.woff2') format('woff2'),
+        url('fonts/CeraPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Cera Pro', Arial, sans-serif;
+    background-color: #fff;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+header {
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo,
+nav,
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.logo span {
+    color: #46A358;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+nav {
+    text-align: center;
+    width: calc(100% - 300px);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #666;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active {
+    color: #666;
+
+    border-bottom: none;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+}
+
+nav ul li a:hover::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #46A358;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.btn {
+    background-color: #46A358;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.hero {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+}
+
+.hero .container {
+    display: block;
+}
+
+.hero-text,
+.hero-image {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-image {
+    margin-left: 60px;
+    position: relative;
+    top: -20px;
+}
+
+.hero-image img {
+    width: 507px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.hero-text h2 {
+    font-size: 16px;
+    color: #3D3D3D;
+    margin-bottom: 10px;
+    font-weight: normal;
+    line-height: 16px;
+}
+
+.hero-text h1 {
+    font-size: 70px;
+    color: #3D3D3D;
+    font-weight: bold;
+    line-height: 70px;
+    margin-bottom: 20px;
+}
+
+.hero-text .green {
+    color: #46A358;
+}
+
+.hero-text p {
+    font-size: 14px;
+    color: #727272;
+    line-height: 24px;
+    margin-bottom: 40px;
+    max-width: 557px;
+}
+
+.hero-text .btn {
+    background-color: #46A358;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+    width: 140px;
+    text-align: center;
+    line-height: 20px;
+}
