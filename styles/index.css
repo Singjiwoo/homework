@@ -1,15 +1,15 @@
+/* Общие стили */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Подключение шрифтов */
 @font-face {
     font-family: 'Cera Pro';
     src: url('fonts/CeraPro-Regular.woff2') format('woff2'),
         url('fonts/CeraPro-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 }
 
 @font-face {
@@ -17,88 +17,65 @@
     src: url('fonts/CeraPro-Bold.woff2') format('woff2'),
         url('fonts/CeraPro-Bold.woff') format('woff');
     font-weight: bold;
-    font-style: normal;
 }
 
-body {
+/* --- Главная страница (homepage) --- */
+.homepage {
     font-family: 'Cera Pro', Arial, sans-serif;
     background-color: #fff;
 }
 
-.container {
+.homepage .container {
     width: 1200px;
     margin: 0 auto;
-    font-size: 0;
 }
 
-header {
+/* --- Хедер --- */
+.homepage header {
     background-color: white;
     padding: 10px 0;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #EAEAEA;
 }
 
-.logo,
-nav,
-.btn {
+.homepage .logo,
+.homepage nav,
+.homepage .btn {
     display: inline-block;
     vertical-align: middle;
-    font-size: 16px;
 }
 
-.logo {
-    margin-right: 10px;
-}
-
-.logo img {
+.homepage .logo img {
     height: 40px;
     margin-right: 10px;
-    vertical-align: middle;
 }
 
-.logo span {
-    color: #46A358;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 40px;
-    vertical-align: middle;
-}
-
-nav {
+/* --- Навигация --- */
+.homepage .navigation {
     text-align: center;
     width: calc(100% - 300px);
 }
 
-nav ul {
+.homepage .navigation ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: inline-block;
 }
 
-nav ul li {
+.homepage .navigation li {
     display: inline-block;
     margin-right: 30px;
     position: relative;
 }
 
-nav ul li a {
+.homepage .navigation a {
     text-decoration: none;
     color: #666;
-    font-weight: normal;
     transition: all 0.3s ease;
+    padding: 10px 0;
+    display: inline-block;
 }
 
-nav ul li a.active {
-    color: #666;
-
-    border-bottom: none;
-}
-
-nav ul li a:hover {
-    font-weight: bold;
-}
-
-nav ul li a:hover::after {
+.homepage .navigation a:hover::after {
     content: '';
     display: block;
     width: 100%;
@@ -109,55 +86,74 @@ nav ul li a:hover::after {
     left: 0;
 }
 
+/* --- Кнопка входа (Login) --- */
 .btn {
+    display: inline-block;
     background-color: #46A358;
     color: white;
-    padding: 8px 15px;
+    padding: 7px 15px;
     text-decoration: none;
-    border-radius: 5px;
-    margin-left: 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-.hero {
+.btn-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1px;
+}
+
+.btn-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn:hover {
+    background-color: #3b8f4f;
+}
+/* --- Hero секция --- */
+.homepage .hero {
     background-color: #f7f7f7;
     padding: 50px 0;
 }
 
-.hero .container {
-    display: block;
-}
-
-.hero-text,
-.hero-image {
+.homepage .hero-text,
+.homepage .hero-image {
     display: inline-block;
     vertical-align: top;
 }
 
-.hero-text {
+.homepage .hero-text {
     max-width: 600px;
 }
 
-.hero-image {
+.homepage .hero-image {
     margin-left: 60px;
-    position: relative;
-    top: -20px;
 }
 
-.hero-image img {
+.homepage .hero-image img {
     width: 507px;
     height: 450px;
     object-fit: cover;
 }
 
-.hero-text h2 {
+.homepage .hero-text h2 {
     font-size: 16px;
     color: #3D3D3D;
     margin-bottom: 10px;
-    font-weight: normal;
     line-height: 16px;
 }
 
-.hero-text h1 {
+.homepage .hero-text h1 {
     font-size: 70px;
     color: #3D3D3D;
     font-weight: bold;
@@ -165,11 +161,11 @@ nav ul li a:hover::after {
     margin-bottom: 20px;
 }
 
-.hero-text .green {
+.homepage .hero-text .green {
     color: #46A358;
 }
 
-.hero-text p {
+.homepage .hero-text p {
     font-size: 14px;
     color: #727272;
     line-height: 24px;
@@ -177,7 +173,7 @@ nav ul li a:hover::after {
     max-width: 557px;
 }
 
-.hero-text .btn {
+.homepage .hero-text .btn {
     background-color: #46A358;
     color: white;
     padding: 10px 20px;
@@ -186,7 +182,109 @@ nav ul li a:hover::after {
     border-radius: 5px;
     font-size: 16px;
     display: inline-block;
-    width: 140px;
     text-align: center;
     line-height: 20px;
+}
+
+/* --- Страница входа (loginpage) --- */
+.loginpage {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.loginpage .container {
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.loginpage .header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.loginpage .header p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.loginpage .form input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.loginpage .form button {
+    width: 90%;
+    padding: 10px;
+    background-color: #800080;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.loginpage .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    color: #888;
+    font-size: 14px;
+}
+
+.loginpage .divider .line {
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.loginpage .divider span {
+    padding: 0 10px;
+}
+
+.loginpage .social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginpage .social-button {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginpage .social-button img {
+    width: 20px;
+    margin-right: 8px;
+}
+
+.loginpage .footer-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: #800080;
 }
