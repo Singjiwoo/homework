@@ -8,8 +8,8 @@
 /* Шрифт на body */
 body {
     font-family: 'Cera Pro', sans-serif;
-    font-size: 16px; /* Значення font-size за замовчуванням */
-    line-height: 1.5; /* Значення line-height за замовчуванням */
+    font-size: 16px; 
+    line-height: 1.5; 
 }
 
 /* Подключение шрифтов */
@@ -35,20 +35,19 @@ body {
 /* --- Хедер --- */
 .homepage header {
     padding: 10px 0;
-    border: 1px solid rgba(70, 163, 88, 0.5); /* Оставить border только если это необходимо */
+    border: 1px solid rgba(70, 163, 88, 0.5);
 }
 
 .homepage .logo,
 .homepage nav,
 .homepage .btn {
     display: inline-block;
-    vertical-align: middle; /* Выровнять по вертикали */
-}
+    vertical-align: middle;
 
 .homepage .logo img {
     height: 40px;
     margin-right: 10px;
-    width: auto; /* Для логотипа в формате SVG */
+    width: auto;
 }
 
 /* --- Навигация --- */
